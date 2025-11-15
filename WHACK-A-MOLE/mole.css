@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Super Pixel", sans-serif;
+}
+
+body {
+  background: rgb(229, 229, 193);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+h1 {
+  color: rgb(223, 116, 116);
+  font-size: 45px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.difficulty {
+  margin-bottom: 50px;
+  color: rgb(144, 110, 117);
+  font-weight: thinner;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#menu {
+  background: rgb(221, 221, 161);
+  padding: 40px 60px;
+  border-radius: 40px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  height: 600px;
+}
+
+.mode {
+  display: block;
+  width: 200px;
+  margin: 10px auto;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: transform 0.1s, opacity 0.2s;
+}
+
+.mode:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.easy { background: rgb(105, 233, 105); }
+.normal { background: rgb(98, 198, 231); }
+.hard { background: rgb(232, 142, 156); }
+
+.game {
+  display: grid;
+  grid-template-columns: repeat(3, 180px);
+  grid-template-rows: repeat(3, 150px);
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  margin-top: -15px;
+}
+
+.score-board {
+  display: flex;
+  justify-content: space-between;
+  width: 610px;       
+  font-size: 15px;     
+  font-weight: thinner;   
+  margin-bottom: 20px;
+  padding: 0px 50px;
+  border-radius: 20px;
+}
+
+.score-board div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#score, #time {
+  color: black;   
+  font-size: 15px;
+  font-weight: thinner;
+}
+
+.hidden {
+  display: none;
+}
+
+.hole {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+}
+
+.bunny-container {
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.bunny {
+  position: absolute;
+  width: 105px;
+  bottom: -100px;
+  transition: bottom 0.3s ease;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.bunny.show {
+  bottom: 30px;
+}
+
+.bush {
+  position: absolute;
+  bottom: -17px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+#endBtn {
+  background: #f47979;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 65px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#endBtn:hover {
+  background: #ff4b4b;
+}
